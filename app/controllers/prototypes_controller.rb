@@ -1,7 +1,7 @@
 class PrototypesController < ApplicationController
 
   def index
-    @prototype = Prototype.all
+    @prototypes = Prototype.all
   end
 
   def new
@@ -18,6 +18,7 @@ class PrototypesController < ApplicationController
   end
 
   def show
+    @prototype = Prototype.find(params[:id])
   end
 
   private
