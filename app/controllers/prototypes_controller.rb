@@ -8,12 +8,12 @@ class PrototypesController < ApplicationController
   end
 
   def create
-    @prototype.create(prototype_params)
+    @prototype = Prototype.new(prototype_params)
     
     if @prototype.save
-      render :index
+      redirect_to root_path
     else
-      redirect_to new_prototype_path
+      render :new
     end
 
   end
