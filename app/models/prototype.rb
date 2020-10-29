@@ -1,5 +1,5 @@
 class Prototype < ApplicationRecord
-  belongs_to :users
+  belongs_to :users, optional: true
   has_many  :comments
   has_one_attached :image
 
