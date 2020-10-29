@@ -8,6 +8,14 @@ class PrototypesController < ApplicationController
   end
 
   def create
+    @prototype.create(prototype_params)
+    
+    if @prototype.save
+      render :index
+    else
+      redirect_to new_prototype_path
+    end
+
   end
 
   private
