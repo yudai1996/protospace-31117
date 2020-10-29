@@ -1,12 +1,11 @@
 <div class="card">
-  <%= link_to image_tag prototype.image, class: 'card_imag' if prototype.image.attached? %>
-  <%# link_to image_tag prototype.image, class: 'card__img' if message.image.attached?  %>
+  <%= link_to image_tag prototype.image, class: 'card_imag' if prototype.image.attached? %> 
+  <%# リンク先の設定は「ArgumentError」の為一時未実装 %>
   <div class="card__body">
-    <%= link_to prototype.title, prototype_path(prototype.id), method: :get, class: 'card_title' %>
+    <%= link_to prototype.title, prototype_path(prototype.id), class: 'card_title' %>
     <p class="card__summary">
       <%= prototype.catch_copy %>
     </p>
-    <%= link_to "by#{prototype.user.name}", class: 'card_user' %>
-    <%# link_to "by prototype.user", root_path, class 'card__user' %>
+    <%= link_to "by#{prototype.user.name}", class: 'card_user' %> <%#パス未設定%>
   </div>
 </div>
