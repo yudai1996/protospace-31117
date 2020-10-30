@@ -4,6 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :comments
+  has_many :prototype
+
   #バリデーションの設定（email,passはデフォルト）
   validates :name,       presence: true
   validates :profile,    presence: true
