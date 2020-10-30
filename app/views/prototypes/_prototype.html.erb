@@ -1,6 +1,5 @@
 <div class="card">
-  <%= link_to image_tag prototype.image, class: 'card_imag' if prototype.image.attached? %> 
-  <%# リンク先の設定は「ArgumentError」の為一時未実装 %>
+  <%= link_to image_tag(prototype.image, class: 'card_imag' ), prototype_path(prototype) %> 
   <div class="card__body">
     <%= link_to prototype.title, prototype_path(prototype.id), class: 'card_title' %>
     <p class="card__summary">
