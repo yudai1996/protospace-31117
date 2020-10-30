@@ -5,6 +5,6 @@
     <p class="card__summary">
       <%= prototype.catch_copy %>
     </p>
-    <%= link_to "by#{prototype.user.name}", class: 'card_user' %> <%#パス未設定%>
+    <%= link_to "by#{prototype.user.name}", user_path(current_user), class: 'card_user' %> <%#パス未設定%>
   </div>
 </div>
