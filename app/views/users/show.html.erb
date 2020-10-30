@@ -28,8 +28,7 @@
         <%= "#{@user.name}さんのプロトタイプ"%>
       </h2>
       <div class="user__card">
-        <%# render partial: 'prototypes/prototype', collection: @user.prototypes %>
-        <%# エラー発生箇所/原因特定できなかった為一時コメント化%>
+        <%= render partial: 'prototypes/prototype', collection: @user.prototypes %>
       </div>
     </div>
   </div>

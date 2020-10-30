@@ -1,10 +1,9 @@
 class ApplicationController < ActionController::Base
-
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  private 
+  private
   def configure_permitted_parameters #deviseでのストロングパラメータの追加
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :password_confiramation, :profile, :occupation, :position])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :profile, :position, :occupation, :password_confiramation])
   end
 
 end
