@@ -3,5 +3,5 @@ class Comment < ApplicationRecord
   belongs_to :prototype
 
   #バリデーションの設定
-  validates :comment,      presence: true
+  validates :text, presence: true
 end
